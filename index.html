@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Vorlage zur Skalierung der Website -->
+	<title>Sammi Vay Portfolio Website</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet"
+	href="https://cdnjs.cloudfare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+	<link rel="stylesheet"
+	href="https://cdnjs.cloudfare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+	integrity="sha256-46qynGAklSFpVbEBog43gvNhfr0j+BmwXdxFgVK/Kvc=" crossorigin="anonymous" /> <!-- brands link -->
+<!-- Coding font -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/718f55213b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<header>
+	<div class="logo">
+		<a href ="index.html"><img src="img/logo.jpg" alt="Logo"></a>
+	</div>
+	<button class="nav-toggle" aria-label="toggle navigation"> <!-- aria = Beschreibung -->
+		<span class="hamburger"></span> <!-- fun things -->
+	</button>
+	<nav class="nav">
+		<ul class="nav__list"> <!-- BEM System, Double Score zeigt Subklassen besser an -->
+			<li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+			<li class="nav__item"><a href="#services" class="nav__link">Portfolio</a></li>
+			<li class="nav__item"><a href="#about" class="nav__link">Über mich</a></li>
+			<li class="nav__item"><a href="#work" class="nav__link">Projekte</a></li>
+		</ul>
+	</nav>
+</header>
+<!-- Introduction -->
+	<section class="intro" id="home"> <!-- id for ankering, class for styling -->
+		<h1 class="section__title section__title--intro"><!--Hello, I am --><strong>Sammi Vay</strong></h1>
+		<p class="section__subtitle section__subtitle--intro">DEV-Sammi</p>
+		<img src="img/profilepicture.png" alt="picture of myself" class="intro__img">
+	</section>
+<!-- My services -->
+	<section class="my-services" id="services">
+		<h2 class="section__title section__title--services">Portfolio</h2>
+		<div class="services"><!--
+			<div class="service">
+				<h3>Technologie</h3>
+				<p>Ob Kunst oder Technik.</p>
+			</div>  / service -->
+
+			<div class="service">
+				<h3>Selfstudy</h3>
+				<p>Mithilfe von Sololearn habe ich zusätzlich zur Schule ein solides Grundwissen im Programmieren aufgebaut."The Odin Project" ist ein Online-Lernplattform, bei dem man nicht nur Übungen absolviert, sondern auch Projekte ausführt die einem im Alltag helfen kann.</p>
+			</div> <!-- / service -->
+
+			<div class="service">
+				<h3>Kreativität</h3>
+				<p>Die Metapher "Thinking outside of the Box" ist mir nicht fremd. Durch meine Hobbys wie Zeichnen, Videos zuschneiden und gestalten konnte ich meine Kreativität vervielfältigen.</p>
+			</div> <!-- / service -->
+		</div> <!-- / services -->
+
+		<a href="#work" class="btn">Meine Projekte</a>
+	</section>
+<!-- About Me -->
+	<section class="about-me" id="about">
+		<h2 class="section__title section__title--about">Wer bin ich?</h2>
+		<p class="section__subtitle section__subtitle--about">Designer & Developer</p>
+		
+		<div class="about-me__body">
+			<p>Ich heisse Sammi Vay und besuche seit August 2020, die Wirtschaftsinformatikschule (WISS) in Zürich. Ende Juli 2021 werde ich den theoretischen Teil zur Ausbildung Informatiker mit Schwerpunkt Applikationsentwicklung erfolgreich abschliessen. Für den praktischen Teil suche ich nun ein Praktikum welcher mindestens 12 Monate andauert(August 2021 - Juli 2022).<br/><br/>
+			Durch diverse vergangene Projekte konnte ich bereits Einblicke und Erfahrungen von der Entwicklung, Planung, Herstellung bis hin zur Fertigungstellung der Produkte werfen. So durfte ich eigene Vorrichtungen konstruieren, Einzelteile fertigen und Baugruppen zusammenbauen, sowie auch Kundenkontakt im Ausland (auf Englisch) pflegen.<br/><br/>
+			Zu meinen Hobbys gehören Zeichnen auf dem Tablet oder von Hand, sowohl auch das Bearbeiten von Videos und Bildern mit verschiedenen Programmen wie GIMP, ProCreate, ShotCut, etc. Um den Ausgleich am PC zu finden, gehe ich auch gerne nach draussen in die Natur oder spiele Lieder auf der Akustik Gitarre.</p>
+		</div>
+
+		<img src="img/bodypicture.png" alt="" class="about-me__img">
+	</section>
+
+<!-- My Work -->
+	<section class="my-work" id="work">
+		<h2 class="section__title section__title--work">Projekte</h2>
+		<p class="section__subtitle section__subtitle--work"></p>
+		<div class="portfolio">
+			<!-- portfolio item WISS -->
+			<a href="wiss.html" class="portfolio__item">
+				<img src="img/wiss.png" alt="Homepage Screenshot der Automarke MINI" class="portfolio__img"/>
+			</a>
+			<!-- portfolio item Odin Project -->
+			<a href="odin.html" class="portfolio__item">
+				<img src="img/odin.png" alt="The Odin Project Logo" class="portfolio__img"/>
+			</a>
+			<!-- portfolio item xojo -->
+			<a href="familyalbum.html" class="portfolio__item">
+				<img src="img/familyalbum_tn.png" alt="Familienalbum" class="portfolio__img"/>
+			</a>
+			<!-- portfolio item optimus -->
+			<a href="optimus.html" class="portfolio__item">
+				<img src="img/optimus_tn.png" alt="Digitale Zeichnung von Optimus Prime" class="portfolio__img"/>
+			</a>
+		</div>
+	</section>
+
+<!-- Footer -->
+	<footer class="footer">
+		<a href="mailto:sammi-vay@hotmail.com" class="footer__link">sammi-vay[at]hotmail.com</a>
+		<ul class="social-list">
+			<li class="social-list__item">
+				<a class="social-list__link" href="https://twitter.com/SammiVay"><i class="fab fa-twitter"></i></a>
+			</li>
+			<li class="social-list__item"><a class="social-list__link" href="https://instagram.com/blubberyx"><i class="fab fa-instagram"></i></a></li>
+			<li class="social-list__item"><a class="social-list__link" href="https://www.facebook.com/sammi.vay.1"><i class="fab fa-facebook-square"></i></a></li>
+			<li class="social-list__item"><a class="social-list__link" href="https://www.linkedin.com/in/sammi-vay-6bb37a178/"><i class="fab fa-linkedin"></i></a></li>
+		</ul>
+	</footer>
+
+	<script src="js/index.js"></script>
+</body>
+</html>
