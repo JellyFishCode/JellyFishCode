@@ -1,0 +1,590 @@
+/* 
+Resume Website
+Datum:		09.02.2021
+Name:		Sammi Vay
+Version:	1.00
+*/
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+:root{
+	--fontfamily-primary: 'Source Sans Pro', sans-serif;
+	--fontfamily-secondary: 'Source Code Pro', monospace;
+
+	--fontweight-regular: 300;
+	--fontweight-bold: 900;
+
+	--color-light: #fff;
+	--color-dark: #303030;
+	--color-accent: #45B08C;
+
+	--fontsize-h1: 3rem;
+	--fontsize-h2: 2.25rem;
+	--fontsize-h3: 1.25rem;
+	--fontsize-body: 1rem;
+
+	--bs: 0.25em 0.25em 0.75em rgba(0,0,0,0.25),
+			0.125em 0.125em 0.25em rgba(0,0,0,0.25); /* more realistic shadow */
+}
+
+@media (min-width: 850px){ /* Wird bei grösseren Screens verwendet */
+	:root{
+		--fontsize-h1: 4.5rem;
+		--fonzsize-h2: 3.75rem;
+		--fontsize-h3: 1.5rem;
+		--fontsize-body: 1.125rem;
+	}
+}
+/* General styles */
+
+html{
+	scroll-behavior: smooth;
+}
+
+body{
+	background: var(--color-light);
+	color: var(--color-dark);
+	margin: 0;
+	font-family: var(--fontfamily-primary);
+	font-size: var(--fontsize-body);
+	line-height: 1.6;
+}
+section{
+	padding: 5em 1em;
+}
+
+img{
+	display: block; /* besser verschiebbar */
+	max-width: 100%;
+}
+
+strong{
+	font-weight: bold;
+}
+/*
+:focus{  Mehr als Hover, für Tab 
+	outline: 3px solid var(--color-light);
+	outline-offset: 3px;
+}
+*/
+
+/* Buttons */
+
+.btn{
+	display: inline-block;
+	padding: 0.5em 2.5em;
+	background: var(--color-light);
+	color: var(--color-dark);
+	text-decoration: none;
+	cursor: pointer;
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: var(--fontweight-bold);
+	transition: transform 200ms ease-in-out;
+	border-radius: 7px;
+	margin-top: 2em;
+}
+
+.btn:hover{
+	transform: scale(1.1); /* Button Animation */
+}
+
+/* Typography */
+h1, h2, h3{
+	line-height: 1.1;
+	margin: 0;
+}
+
+h1{
+	font-size: var(--fontsize-h1);
+}
+h2{
+	font-size: var(--fontsize-h2);
+}
+h3{
+	font-size: var(--fontsize-h3);
+}
+
+.section__title{
+	margin-bottom: 0.1em;
+	margin-top: 0.25em;
+}
+
+.section__title--intro{
+	font-weight: var(--fontweight-regular);
+}
+.section__title--intro strong{ /* Braucht immer eine ganze Zeile */
+	display: block;
+}
+
+.section__subtitle{
+	margin: 0;
+	font-size: var(--fontsize-h3);
+}
+
+.section__subtitle--intro, .section__subtitle--about{
+	background: var(--color-accent);
+	padding: 0.25em 1em;
+	font-family: var(--fontfamily-secondary);
+	margin-bottom: 1em;
+}
+.section__subtitle--work{
+	color: var(--color-accent);
+	font-weight: var(--fontweight-bold);
+	margin-bottom: 2em;
+}
+
+/* header & navigation */
+
+.logo{
+	max-width: 125px;
+}
+
+header{
+	display: flex;
+	justify-content: space-between;
+	padding: 1em;
+}
+
+.nav{
+	position: fixed;
+	background: var(--color-dark);
+	color: var(--color-light);
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 100;
+
+	transform: translateX(100%); /* Navigation breite */
+	transition: transform 250ms cubic-bezier(0.5, 0, 0.5, 1);
+}
+
+.nav__list{
+	list-style: none;
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+	/*justify-content: space-around; */
+	align-items: center;
+	margin: 0;
+	padding: 0;
+}
+
+.nav__link{
+	color: inherit;
+	font-weight: var(--fontweight-bold);
+	font-size: var(--fontsize-h2);
+	text-decoration: none;
+}
+
+.nav__link:hover{
+	color: var(--color-accent);
+}
+
+.nav-toggle{
+	padding: 0.25em;
+	background: transparent;
+	border: 0;
+	cursor: pointer;
+	position: absolute;
+	right: 1em;
+	top: 1em;
+	z-index: 1000;
+}
+
+.nav-open .nav{
+	transform: translateX(0); /* öffnet und schliesst Navigationsleiste */
+}
+
+.nav-open .nav-toggle{
+	position: fixed;
+}
+
+.nav-open .hamburger{
+	transform: rotate( 0.625turn); /* rotates weirdly */
+}
+
+.nav-open .hamburger::before{
+	transform: rotate(90deg) translateX(-12px);
+}
+
+.nav-open .hamburger::after{
+	opacity: 0.0;
+}
+
+.hamburger{
+	margin: 1em 0 0 0;
+	display: block;
+	position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after{
+	background: var(--color-accent);
+	width: 4em;
+	height: 6px;
+	border-radius: 2em;
+	transition: transform 250ms ease-in-out;
+}
+
+.hamburger::before,
+.hamburger::after{
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+}
+
+.hamburger::before{
+	top: 12px;
+}
+.hamburger::after{
+	bottom: 12px;
+}
+
+
+/* intro section */
+
+.intro{
+	position: relative;
+	background-color: var(--color-light); /* sicherheitshalber, wenn das Bild nicht lädt 
+	background-image: url(../img/bg_japan.jpg);
+	background-blend-mode: multiply;
+	background-repeat: no-repeat;
+	width: 100%;
+	color: var(--color-dark);
+	text-align: center; */
+}
+
+.intro__img{
+	box-shadow: var(--bs);
+}
+
+.section__subtitle--intro{
+	display: inline-block;
+}
+
+@media (min-width: 850px) {
+	.intro{
+		display: grid;
+		width: min-content;
+		margin: 0 auto;
+		grid-column-gap: 1em;
+		grid-template-areas: 
+			"img title"
+			"img subtitle";
+		grid-template-columns: min-content max-content;
+	}
+
+	.intro__img{
+		grid-area: img;
+		min-width: 250px;
+		position: relative;
+		z-index: 2;
+	}
+
+	.section__subtitle--intro{
+		align-self: start;
+		grid-column: -1 / 1;
+		grid-row: 2;
+		text-align: right;
+		position: relative;
+		left: -1.5em;
+		width: calc(100% + 4em);
+		/* padding-left: 1em;
+		padding-right: calc(200px + 4em); */
+	}
+}
+
+/* ----------------------------------------- My Services section ----------------------------------------- */
+
+.my-services{
+	background-color: var(--color-accent); /* sicherheitshalber, wenn das Bild nicht lädt */
+	background-image: url(../img/background_placeholder.png);
+	background-size: cover;
+	background-blend-mode: multiply;
+	color: var(--color-light);
+	text-align: center;
+}
+
+.section__title--services{
+	color: var(--color-light);
+	position: relative;
+}
+
+.section__title--services::after{
+	content: '';
+	display: block;
+	width: 15%;
+	height: 1px;
+	margin: 0.5em auto 1em;
+	background: var(--color-light);
+	opacity: 0.5;
+}
+
+.services{
+	margin-bottom: 4em;
+}
+
+.service{
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+@media (min-width: 850px){
+	.services{
+		display: flex;
+		max-width: 1000px;
+		margin: 0 auto;
+	}
+
+	.service + .service{ /* falls zwei Elemente mit der Klasser service vorkommen */
+		margin-left: 2em;
+	}
+}
+
+/* ----------------------------------------- About Me ----------------------------------------- */
+
+.about-me{
+	max-width: 1000px;
+	margin: 0 auto;
+}
+.about-me__img{
+	box-shadow: var(--bs);
+}
+
+@media (min-width: 850px){
+	.about-me{
+		display: grid;
+		grid-template-columns: 1fr 200px;
+		grid-template-areas: 
+			"title img"
+			"subtitle img"
+			"text img";
+		grid-column-gap: 1.5em; /* Horizontaler Offset */
+		max-width: 1000px;
+	}
+
+	.section__title--about{
+		grid-area: title;
+	}
+
+	.section__subtitle--about{
+		grid-column: 1 / -1;
+		grid-row: 2;
+		position: relative;
+		left: -1em;
+		width: calc(100% + 4em);
+		padding-left: 1em;
+		padding-right: calc(200px + 4em);
+	}
+
+	.about-me__img{
+		grid-area: img;
+		position: relative;
+		z-index: 2;
+	}
+}
+
+/* my work */
+
+.my-work{
+	background-color: #034034;
+	color: var(--color-light);
+	text-align: center;
+}
+
+.portfolio{
+	display: grid;
+	width: 80%;
+	margin: 0 auto;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.portfolio__item{
+	background: var(--color-accent);
+	overflow: hidden; /* vergrössert sich nur im Bildrahmen */
+	align-self: center;
+}
+
+.portfolio__img{
+	transition: 
+		transform 750ms cubic-bezier(0.5, 0, 0.5, 1),
+		opacity 250ms linear;
+	object-fit: cover;
+}
+
+.portfolio__item:focus{
+	position: relative;
+	z-index: 2;
+}
+
+.portfolio__img:hover,
+.portfolio__item:focus .portfolio__img{
+	transform: scale(1.1);
+	opacity: 0.75;
+}
+
+/* ----------------------------------------- footer ----------------------------------------- */
+
+.footer{
+	background: #030F0B;
+	color: var(--color-accent);
+	text-align: center;
+	padding: 2.5em 0;
+	font-size: var(--fontsize-h3);
+}
+
+.footer a{
+	color: inherit;
+	text-decoration: none;
+}
+
+.footer__link{
+	font-weight: var(--fontweight-bold);
+}
+
+.footer__link:hover,
+.social-list__link:hover{
+	opacity: 0.7;
+}
+
+.footer__link:hover{
+	text-decoration: underline;
+}
+
+.social-list{
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	margin: 1em 0 0 0;
+	padding: 0;
+}
+
+.social-list__item{
+	margin: 0 0.5em;
+}
+
+.social-list__link{
+	padding: 0.5em;
+}
+
+.portfolio-item-individual{
+	padding: 0 2em 2em;
+	max-width: 850px;
+	margin: 0 auto;
+}
+
+.portfolio-item-individual p{
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.portfolio-item-individual img{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+/* ----------------------------------------- Slider ----------------------------------------- */
+* {box-sizing:border-box}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* Slider End */
