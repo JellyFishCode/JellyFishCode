@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Vorlage zur Skalierung der Website -->
+	<title>Sammi Vay Portfolio Website</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet"
+	href="https://cdnjs.cloudfare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+	<link rel="stylesheet"
+	href="https://cdnjs.cloudfare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+	integrity="sha256-46qynGAklSFpVbEBog43gvNhfr0j+BmwXdxFgVK/Kvc=" crossorigin="anonymous" /> <!-- brands link -->
+<!-- Coding font -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/718f55213b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<header>
+	<div class="logo">
+		<a href ="index.html"><img src="img/logo.jpg" alt="Logo"></a> 
+	</div>
+	<button class="nav-toggle" aria-label="toggle navigation"> <!-- aria = Beschreibung -->
+		<span class="hamburger"></span> <!-- fun things -->
+	</button>
+	<nav class="nav">
+		<ul class="nav__list"> <!-- BEM System, Double Score zeigt Subklassen besser an -->
+			<li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+			<li class="nav__item"><a href="index.html#services" class="nav__link">My services</a></li>
+			<li class="nav__item"><a href="index.html#about" class="nav__link">Über mich</a></li>
+			<li class="nav__item"><a href="index.html#work" class="nav__link">Projekte</a></li>
+		</ul>
+	</nav>
+</header>
+<!-- Introduction -->
+	<section class="intro" id="home"> <!-- id for ankering, class for styling -->
+		<h1 class="section__title section__title--intro"><strong>The Odin Project</strong></h1>
+		<p class="section__subtitle section__subtitle--intro">Zielstrebend</p>
+		<img src="img/odin_t.png" alt="Kopf von Odin" class="intro__img">
+	</section>
+
+	<div class="portfolio-item-individual">
+		<p>In der Schule lernt man nicht viel über die Programmierumgebung selbst(wie zB. Ubuntu). Um sich darin zurecht zufinden, passt "The Odin Project" hervorragend als Lernunterstützung. "The Odin Project" ist ein Online Learning Plattform die von null anfängt. Dieser beginnt mit dem Umgehen im Betriebssystem Xubuntu und folgt mit diversen Projekten, bei dem man HTML, CSS und Javascript anwendet.<br>
+		<br>
+		Einige Projekte finden sie in meinen GitHub repositories.
+		</p>
+
+<!-- Slider 
+<div class="slideshow-container">
+
+
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="img/img1.jpg" style="width:100%">
+    <div class="text">Caption Text</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="img/img2.jpg" style="width:100%">
+    <div class="text">Caption Two</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="img/img3.jpg" style="width:100%">
+    <div class="text">Caption Three</div>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div> 		
+	</div>
+
+ Slider End -->
+
+<!-- Footer -->
+	<footer class="footer">
+		<a href="mailto:sammi-vay@protonmail.com" class="footer__link">sammi-vay[at]hotmail.com</a>
+		<ul class="social-list">
+			<li class="social-list__item">
+				<a class="social-list__link" href="https://twitter.com/SammiVay"><i class="fab fa-twitter"></i></a>
+			</li>
+			<li class="social-list__item"><a class="social-list__link" href="https://instagram.com/blubberyx"><i class="fab fa-instagram"></i></a></li>
+			<li class="social-list__item"><a class="social-list__link" href="https://www.facebook.com/sammi.vay.1"><i class="fab fa-facebook-square"></i></a></li>
+			<li class="social-list__item"><a class="social-list__link" href="https://www.linkedin.com/in/sammi-vay-6bb37a178/"><i class="fab fa-linkedin"></i></a></li>
+		</ul>
+	</footer>
+
+	<script src="js/index.js"></script>
+</body>
+</html>

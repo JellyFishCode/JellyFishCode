@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Vorlage zur Skalierung der Website -->
+	<title>Sammi Vay Portfolio Website</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet"
+	href="https://cdnjs.cloudfare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+	<link rel="stylesheet"
+	href="https://cdnjs.cloudfare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+	integrity="sha256-46qynGAklSFpVbEBog43gvNhfr0j+BmwXdxFgVK/Kvc=" crossorigin="anonymous" /> <!-- brands link -->
+<!-- Coding font -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/718f55213b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<header>
+	<div class="logo">
+		<a href ="index.html"><img src="img/logo.jpg" alt="Logo"></a> 
+	</div>
+	<button class="nav-toggle" aria-label="toggle navigation"> <!-- aria = Beschreibung -->
+		<span class="hamburger"></span> <!-- fun things -->
+	</button>
+	<nav class="nav">
+		<ul class="nav__list"> <!-- BEM System, Double Score zeigt Subklassen besser an -->
+			<li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+			<li class="nav__item"><a href="index.html#services" class="nav__link">My services</a></li>
+			<li class="nav__item"><a href="index.html#about" class="nav__link">Über mich</a></li>
+			<li class="nav__item"><a href="index.html#work" class="nav__link">Projekte</a></li>
+		</ul>
+	</nav>
+</header>
+<!-- Introduction -->
+	<section class="intro" id="home"> <!-- id for ankering, class for styling -->
+		<h1 class="section__title section__title--intro"><strong>Mini Homepage</strong></h1>
+		<p class="section__subtitle section__subtitle--intro">Grundwissen</p>
+		<img src="img/optimus_t.png" alt="Kopf von Optimus Prime" class="intro__img">
+	</section>
+
+	<div class="portfolio-item-individual">
+		<p>Wie bereits erwähnt, besuche ich zurzeit die Informatik Schule WISS in Zürich. In dieser Ausbildung habe ich mir durch verschiedene Module, diverses Grundwissen angeeignet.<br>
+		Beispielsweise haben wir prozedurales und objekt-orientiertes Programmieren mit JAVA und C++ angeschaut. Datenbanken mit mySQL realisiert,</p>
+		<img src="img/mini.png" alt="Website von der Marke Mini"/>
+		<p>Projekt Mini Homepage</p>
+	</div>
+
+<!-- Footer -->
+	<footer class="footer">
+		<a href="mailto:sammi-vay@protonmail.com" class="footer__link">sammi-vay[at]hotmail.com</a>
+		<ul class="social-list">
+			<li class="social-list__item">
+				<a class="social-list__link" href="https://twitter.com/SammiVay"><i class="fab fa-twitter"></i></a>
+			</li>
+			<li class="social-list__item"><a class="social-list__link" href="https://instagram.com/blubberyx"><i class="fab fa-instagram"></i></a></li>
+			<li class="social-list__item"><a class="social-list__link" href="https://www.facebook.com/sammi.vay.1"><i class="fab fa-facebook-square"></i></a></li>
+			<li class="social-list__item"><a class="social-list__link" href="https://www.linkedin.com/in/sammi-vay-6bb37a178/"><i class="fab fa-linkedin"></i></a></li>
+		</ul>
+	</footer>
+
+	<script src="js/index.js"></script>
+</body>
+</html>
