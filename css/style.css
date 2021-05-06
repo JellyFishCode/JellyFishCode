@@ -522,7 +522,7 @@ header{
   user-select: none;
 }
 
-/* Position the "next button" to the right */
+/* "next button" position to the right */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
@@ -535,16 +535,18 @@ header{
 
 /* Caption text */
 .text {
-  color: #f2f2f2;
+  color: white;
+  font-weight: bold;
   font-size: 15px;
   padding: 8px 12px;
   position: absolute;
-  bottom: 8px;
+  display: inline;
+  bottom: 0px;
   width: 100%;
   text-align: center;
+  background-color: rgba(0,0,0,0.8);
 }
 
-/* Number text (1/3 etc) */
 .numbertext {
   color: #f2f2f2;
   font-size: 12px;
@@ -569,7 +571,6 @@ header{
   background-color: #717171;
 }
 
-/* Fading animation */
 .fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;
