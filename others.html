@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sammi Vay Portfolio Website</title>
+	<link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet"
+	href="https://cdnjs.cloudfare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+	<link rel="stylesheet"
+	href="https://cdnjs.cloudfare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+	integrity="sha256-46qynGAklSFpVbEBog43gvNhfr0j+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+<!-- Coding font -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/718f55213b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<header>
+	<div class="logo">
+		<a href ="index.html"><img src="img/logo.jpg" alt="Logo"></a> 
+	</div>
+	<button class="nav-toggle" aria-label="toggle navigation">
+		<span class="hamburger"></span>
+	</button>
+	<nav class="nav">
+		<ul class="nav__list">
+			<li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+			<li class="nav__item"><a href="index.html#services" class="nav__link">Portfolio</a></li>
+			<li class="nav__item"><a href="index.html#about" class="nav__link">Über mich</a></li>
+			<li class="nav__item"><a href="index.html#work" class="nav__link">Projekte</a></li>
+		</ul>
+	</nav>
+</header>
+<!-- Introduction -->
+	<section class="intro" id="home">
+		<h1 class="section__title section__title--intro"><strong>Persönliche Projekte</strong></h1>
+		<p class="section__subtitle section__subtitle--intro">Make learning fun</p>
+		<img src="img/call_sq.jpg" alt="Sammi - 3 Jahre alt" class="intro__img" id="call">
+	</section>
+
+	<div class="portfolio-item-individual">
+		<p>
+			Von Zeit zu Zeit habe ich immer wieder bemerkt wie wichtig es ist, den kontinuierlichen Lernprozess zu fördern. Vorallem 
+			beim Programmieren muss man flexibel sein und sich den Umgebungen und allfällige Neuheiten vor Augen behalten. Darum programmiere 
+			ich auch in meiner Freizeit gerne an meinen eigenen Projekten. 
+
+			<div class="grid__table">
+				<div class="zerotn">
+		    		<img src="img/edabit.png" alt="img/exercises.png" style="width:100%" class="open">
+				</div>
+				<div class="zerodesc">
+					<h5>Übungen & Lernplattformen</h5>
+					<p>Um mir das nötig Grundwissen für spezifische Programmiersprachen anzueignen, verwende ich unterschiedliche Lernplattformen.
+					Unter anderem Sololearn & FreeCodeCamp für Grundlagen, The Odin Project für kleinere Projekte und Edabit Premium für Algorithmen.</p>
+				</div>
+
+				<div class="onetn">
+		    		<img id="myImg" src="img/familyalbum_preview.png" alt="img/familyalbum.png" style="width:100%" class="open">
+				</div>
+				<div class="onedesc">
+					<h5>Familienalbum</h5>
+					<p>Für meine Eltern habe ich ein Galerie im Masonry-Struktur erstellt. Dabei konnte ich das Gelernte von der Schule verwenden 
+					und neue Funktionen vom Internet erlernen und anwenden. Dazu gehört u.a das Zuweisen und Filtern von Tags zu den jeweiligen
+					Bildern, Gestaltung und Animationen der einzelnen Elemente durch CSS.</p>
+				</div>
+
+				<div class="twotn">
+		    		<img src="img/snake.png" alt="img/snake.png" style="width:100%" class="open">
+				</div>
+				<div class="twodesc">
+					<h5>Snake</h5>
+					<p>Das klassische Snake-Spiel erstellt mit C# in Windows Forms. Nebst den üblichen Spielregeln habe ich es ermöglich einige
+					Einstellungen festzulegen. Beispielsweise die Grösse des Fensters, Farbe der Schlange, sowie die Geschwindigkeit.</p>
+				</div>
+
+				<div class="threetn">
+		    		<img src="img/goe_tn.png" alt="img/goe.png" style="width:100%" class="open">
+				</div>
+				<div class="threedesc">
+					<h5>Chinesisches Memory Spiel</h5>
+					<p>Beim Spiel Game of Eternity geht es darum verschiedene Karten zu kombinieren. Dabei können unterschiedliche Kombinationen
+					zwischen 2 bis 5 Paare entstehen. Durch eine einfach Webapplikation mit Javascript habe ich einen "Helfer" erstellt, welches mir
+					erlaubt die aktuelle Karten in Übersicht zu behalten und mögliche Kombinationen aufzuweisen.</p>
+				</div>
+			</div>
+
+			<div id="modal__container">
+				<div class="modal">
+			  		<span id="close">&times;</span>
+					<img id="modal" src="img/edabit.png" alt="Uebungen">
+				</div>
+			</div>
+
+		</p>
+	</div>
+<!-- Footer -->
+	<footer class="footer">
+		<a href="mailto:sammi-vay@protonmail.com" class="footer__link">sammi-vay[at]hotmail.com</a>
+		<ul class="social-list">
+			<li class="social-list__item">
+				<a class="social-list__link" href="https://twitter.com/SammiVay"><i class="fab fa-twitter"></i></a>
+			</li>
+			<li class="social-list__item"><a class="social-list__link" href="https://instagram.com/yotsumaruto"><i class="fab fa-instagram"></i></a></li>
+			<li class="social-list__item"><a class="social-list__link" href="https://www.facebook.com/sammi.vay.1"><i class="fab fa-facebook-square"></i></a></li>
+			<li class="social-list__item"><a class="social-list__link" href="https://www.linkedin.com/in/sammi-vay-6bb37a178/"><i class="fab fa-linkedin"></i></a></li>
+		</ul>
+	</footer>
+
+	<script src="js/script.js"></script>
+</body>
+</html>

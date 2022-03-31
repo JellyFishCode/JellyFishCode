@@ -1,5 +1,5 @@
 /* 
-Resume Website
+Portfolio Website
 Datum:		09.02.2021
 Name:		Sammi Vay
 Version:	1.00
@@ -107,6 +107,9 @@ h2{
 }
 h3{
 	font-size: var(--fontsize-h3);
+}
+h5{
+	display: inline;
 }
 
 .section__title{
@@ -606,4 +609,104 @@ header{
   to {opacity: 1}
 }
 
-/* Slider End */
+/* ----------------------------------------- Grid others ----------------------------------------- */
+
+.grid__table{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+  grid-auto-rows: minmax(100px, auto);
+  padding: 1em;
+  background: #A2D7C5;
+}
+
+.zerotn {
+	grid-column: 1 / 2;
+	grid-row: 1;
+	align-self: center;
+}
+.zerodesc {
+	grid-column: 2 / 4;
+	grid-row: 1;
+	align-self: center;
+}
+.onetn {
+	grid-column: 1 / 2;
+	grid-row: 2;
+	align-self: center;
+}
+.onedesc {
+	grid-column: 2 / 4;
+	grid-row: 2;
+	align-self: center;
+}
+.twotn {
+	grid-column: 1 / 2;
+	grid-row: 3;
+	align-self: center;
+}
+.twodesc {
+	grid-column: 2 / 4;
+	grid-row: 3;
+	align-self: center;
+}
+.threetn {
+	grid-column: 1 / 2;
+	grid-row: 4;
+	align-self: center;
+}
+.threedesc {
+	grid-column: 2 / 4;
+	grid-row: 4;
+	align-self: center;
+}
+
+/* ----------------------------------------- Image Popup ----------------------------------------- */
+#modal__container {
+	opacity: 0;
+	pointer-events: none;  /* Clicks through it */
+	background-color: rgba(0, 0, 0, 0.4);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	z-index: 99;
+}
+
+#modal__container.show {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.open{
+	cursor: pointer;
+}
+
+/* Close Button */
+#close {
+  position: fixed;
+  bottom: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  background: var(--color-dark);
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  border-radius: 0.3em;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+#close:hover,
+#close:focus {
+  color: green;
+  text-decoration: none;
+  cursor: pointer;
+}
+

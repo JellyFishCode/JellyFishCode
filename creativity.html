@@ -2,14 +2,15 @@
 <html lang="de">
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Vorlage zur Skalierung der Website -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Sammi Vay Portfolio Website</title>
+	<link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet"
 	href="https://cdnjs.cloudfare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
 	<link rel="stylesheet"
 	href="https://cdnjs.cloudfare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
-	integrity="sha256-46qynGAklSFpVbEBog43gvNhfr0j+BmwXdxFgVK/Kvc=" crossorigin="anonymous" /> <!-- brands link -->
+	integrity="sha256-46qynGAklSFpVbEBog43gvNhfr0j+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
 <!-- Coding font -->
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
@@ -22,11 +23,11 @@
 	<div class="logo">
 		<a href ="index.html"><img src="img/logo.jpg" alt="Logo"></a> 
 	</div>
-	<button class="nav-toggle" aria-label="toggle navigation"> <!-- aria = Beschreibung -->
-		<span class="hamburger"></span> <!-- fun things -->
+	<button class="nav-toggle" aria-label="toggle navigation">
+		<span class="hamburger"></span>
 	</button>
 	<nav class="nav">
-		<ul class="nav__list"> <!-- BEM System, Double Score zeigt Subklassen besser an -->
+		<ul class="nav__list"> 
 			<li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
 			<li class="nav__item"><a href="index.html#services" class="nav__link">Portfolio</a></li>
 			<li class="nav__item"><a href="index.html#about" class="nav__link">Über mich</a></li>
@@ -35,17 +36,20 @@
 	</nav>
 </header>
 <!-- Introduction -->
-	<section class="intro" id="home"> <!-- id for ankering, class for styling -->
-		<h1 class="section__title section__title--intro"><strong>The Odin Project</strong></h1>
-		<p class="section__subtitle section__subtitle--intro">Zielstrebend</p>
-		<img src="img/odin_t.png" alt="Kopf von Odin" class="intro__img">
+	<section class="intro" id="home">
+		<h1 class="section__title section__title--intro"><strong>Creativity</strong></h1>
+		<p class="section__subtitle section__subtitle--intro">Precision & Tenacity</p>
+		<img src="img/optimus_t.png" alt="Kopf von Optimus Prime" class="intro__img">
 	</section>
 
 	<div class="portfolio-item-individual">
-		<p>In der WISS-Schule wird nicht viel über die Programmierumgebung selbst (wie zB. Ubuntu) unterrichtet. Um sich in einer solchen zurecht zufinden, passt "The Odin Project" hervorragend als Lernunterstützung. "The Odin Project" ist eine Online Learning-Plattform, auf welcher man bei null anfängt. Der Lernprozess beginnt mit dem Umgang im Betriebssystem Xubuntu und folgt mit diversen Projekten, bei welchen HTML, CSS und Javascript angewendet wird.<br>
-		<br>
-		Einige Projekte finden Sie in meinen GitHub repositories.
-		</p>
+		<!--<p>Zu meinen Hobbys gehört das Gestalten auf dem Tablet iPad Pro mithilfe der Applikation Procreate®, das traditionelle zeichnen von Hand auf Papier, sowie 3D-Modellierung mit einem WACOM Grafiktablett auf dem Program Blender.</p> -->
+
+
+		<p>Eines meiner Hobbys ist das Zeichnen auf dem Tablet iPad Pro mithilfe der Applikation Procreate®. Diese Grafik war das erste grössere Projekt, bei welcher ich mithilfe einer Vorlage, Optimus Prime von Transformers gezeichnet und koloriert habe. Dabei verwendete ich meine Kenntnisse vom Handzeichnen und eignete mir das weiter benötigte Wissen im Internet an, um das Bild so gut wie möglich zu vervollständigen. Mit Geduld und Fleiss habe ich die Grafik zufrieden vollenden können. Schlussendlich war das Hauptziel des Projekts nicht nur eine ästhetisches Bild zu erstellen, sondern Erfahrungen für weitere Projekte zu sammeln.</p>
+		<img src="img/optimus.jpg" alt="Digitale Zeichnung von Optimus Prime"/>
+		<p>Juni 2020 - Optimus Prime - Zeitabmessung ~ 90 Stunden</p>
+	</div>
 
 <!-- Footer -->
 	<footer class="footer">
@@ -60,6 +64,6 @@
 		</ul>
 	</footer>
 
-	<script src="js/index.js"></script>
+	<script src="js/script.js"></script>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Vorlage zur Skalierung der Website -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Sammi Vay Portfolio Website</title>
 	<link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="css/style.css">
@@ -17,16 +17,17 @@
 	<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/718f55213b.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
 <header>
 	<div class="logo">
 		<a href ="index.html"><img src="img/logo.jpg" alt="Logo"></a>
 	</div>
-	<button class="nav-toggle" aria-label="toggle navigation"> <!-- aria = Beschreibung -->
-		<span class="hamburger"></span> <!-- fun things -->
+	<button class="nav-toggle" aria-label="toggle navigation">
+		<span class="hamburger"></span>
 	</button>
 	<nav class="nav">
-		<ul class="nav__list"> <!-- BEM System, Double Score zeigt Subklassen besser an -->
+		<ul class="nav__list"> <!-- double score for subclasses -->
 			<li class="nav__item"><a href="#" class="nav__link">Home</a></li>
 			<li class="nav__item"><a href="#services" class="nav__link">Portfolio</a></li>
 			<li class="nav__item"><a href="#about" class="nav__link">Über mich</a></li>
@@ -35,30 +36,25 @@
 	</nav>
 </header>
 <!-- Introduction -->
-	<section class="intro" id="home"> <!-- id for ankering, class for styling -->
-		<h1 class="section__title section__title--intro"><!--Hello, I am --><strong>Sammi Vay</strong></h1>
-		<p class="section__subtitle section__subtitle--intro">DEV-Sammi</p>
+	<section class="intro" id="home">
+		<h1 class="section__title section__title--intro"><strong>Sammi Vay</strong></h1>
+		<p class="section__subtitle section__subtitle--intro">Learning is a journey</p>
 		<img src="img/profilepicture.png" alt="picture of myself" class="intro__img">
 	</section>
 <!-- My services -->
 	<section class="my-services" id="services">
 		<h2 class="section__title section__title--services title_h2">Portfolio</h2>
-		<div class="services"><!--
-			<div class="service">
-				<h3>Durchblick</h3>
-				<p>Planing, Konstruktion, Produktion oder Abwicklung.</p>
-			</div>   / service -->
-
+		<div class="services">
 			<div class="service">
 				<h3>Selfstudy</h3>
 				<p>Mithilfe von SoloLearn habe ich mir zusätzlich zur schulischen Ausbildung ein solides Grundwissen im Programmieren erarbeitet. "The Odin Project" ist eine Online-Lernplattform, auf welcher nicht nur Übungen absolviert werden können, sondern auch Projekte ausführt, die einem im Alltag helfen können.</p>
-			</div> <!-- / service -->
+			</div>
 
 			<div class="service">
 				<h3>Kreativität</h3>
 				<p>Die Metapher "Thinking outside of the box" ist mir nicht fremd. Durch meine Hobbies wie Zeichnen, Videos zuschneiden und Gestalten habe ich meine Kreativität vervielfältigt und vertieft.</p>
-			</div> <!-- / service -->
-		</div> <!-- / services -->
+			</div>
+		</div>
 
 		<a href="#work" class="btn">Meine Projekte</a>
 	</section>
@@ -68,9 +64,9 @@
 		<p class="section__subtitle section__subtitle--about">Designer & Developer</p>
 		
 		<div class="about-me__body">
-			<p>Ich heisse Sammi Vay und besuche seit August 2020, die Wirtschaftsinformatikschule (WISS - Schulen für Wirtschaft Informatik Immobolien) in Zürich. Ende Juli 2021 werde ich den theoretischen Teil zur Ausbildung Informatiker mit Schwerpunkt Applikationsentwicklung abschliessen. Für den praktischen Teil suche ich nun ein Praktikum, mit einer Dauer von mindestens 12 Monaten (ab August 2021 - Juli 2022 oder nach Vereinbarung).<br/><br/>
+			<p>Ich heisse Sammi Vay und besuche seit August 2020, die Wirtschaftsinformatikschule (WISS - Schulen für Wirtschaft Informatik Immobolien) in Zürich. Ende Juli 2021 werde ich den theoretischen Teil zur Ausbildung Informatiker mit Schwerpunkt Applikationsentwicklung abschliessen. Für den praktischen Teil suche ich nun ein Praktikum ab April 2022 oder nach Vereinbarung.<br/><br/>
 			Durch den Einbezug in diversen Projekten in der Vergangenheit konnte ich bereits einige spannende Einblicke und wertvolle Erfahrungen von der Entwicklung, Planung, Herstellung bis hin zur Fertigstellung der Produkte sammeln. So durfte ich bspw. eigene Vorrichtungen konstruieren, Einzelteile fertigen und Baugruppen zusammenbauen, sowie auch Kundenkontakt im Ausland (in englischer Sprache) pflegen.<br/><br/>
-			Zu meinen Hobbies gehören Zeichnen auf dem Tablet oder von Hand, sowie das Bearbeiten von Videos und Bildern mit verschiedenen Programmen wie GIMP, Procreate®, Shotcut, etc. Um den Ausgleich zur Arbeit am PC zu finden, bin ich auch gerne draussen in der Natur unterwegs oder spiele Lieder auf der Akustikgitarre.</p>
+			Zu meinen Hobbys gehören Zeichnen auf dem Tablet oder von Hand, sowie das Bearbeiten von Videos und Bildern mit verschiedenen Programmen wie GIMP, Procreate®, Shotcut, etc. Um den Ausgleich zur Arbeit am PC zu finden, bin ich auch gerne draussen in der Natur unterwegs oder spiele Lieder auf der Akustikgitarre.</p>
 		</div>
 
 		<img src="img/bodypicture.png" alt="" class="about-me__img">
@@ -85,22 +81,19 @@
 			<a href="wiss.html" class="portfolio__item">
 				<img src="img/wiss.png" alt="Homepage Screenshot der Automarke MINI" class="portfolio__img"/>
 			</a>
-			<!-- portfolio item xojo -->
-			<a href="familyalbum.html" class="portfolio__item">
-				<img src="img/familyalbum_tn.png" alt="Familienalbum" class="portfolio__img"/>
-			</a>
-			<!-- portfolio item Odin Project -->
-			<a href="odin.html" class="portfolio__item">
-				<img src="img/odin.png" alt="The Odin Project Logo" class="portfolio__img"/>
+			<!-- portfolio item other Projects -->
+			<a href="others.html" class="portfolio__item">
+				<img src="img/odin.png" alt="Andere Projekte" class="portfolio__img"/>
 			</a>
 			<!-- portfolio item optimus -->
-			<a href="optimus.html" class="portfolio__item">
+			<a href="creativity.html" class="portfolio__item">
 				<img src="img/optimus_tn.png" alt="Digitale Zeichnung von Optimus Prime" class="portfolio__img"/>
 			</a>
 		</div>
 	</section>
 
 <!-- Footer -->
+
 	<footer class="footer">
 		<a href="mailto:sammi-vay@hotmail.com" class="footer__link">sammi-vay[at]hotmail.com</a>
 		<ul class="social-list">
@@ -113,6 +106,6 @@
 		</ul>
 	</footer>
 
-	<script src="js/index.js"></script>
+	<script src="js/script.js"></script>
 </body>
 </html>
