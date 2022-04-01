@@ -27,10 +27,10 @@ Version:	1.00
 	--fontsize-body: 1rem;
 
 	--bs: 0.25em 0.25em 0.75em rgba(0,0,0,0.25),
-			0.125em 0.125em 0.25em rgba(0,0,0,0.25); /* more realistic shadow */
+			0.125em 0.125em 0.25em rgba(0,0,0,0.25);
 }
 
-@media (min-width: 850px){ /* Wird bei grösseren Screens verwendet */
+@media (min-width: 850px){
 	:root{
 		--fontsize-h1: 4.5rem;
 		--fonzsize-h2: 3.75rem;
@@ -38,7 +38,7 @@ Version:	1.00
 		--fontsize-body: 1.125rem;
 	}
 }
-/* General styles */
+/* ----------------------------------------- General styles ----------------------------------------- */
 
 html{
 	scroll-behavior: smooth;
@@ -64,15 +64,8 @@ img{
 strong{
 	font-weight: bold;
 }
-/*
-:focus{  Mehr als Hover, für Tab 
-	outline: 3px solid var(--color-light);
-	outline-offset: 3px;
-}
-*/
 
 /* Buttons */
-
 .btn{
 	display: inline-block;
 	padding: 0.5em 2.5em;
@@ -108,7 +101,7 @@ h2{
 h3{
 	font-size: var(--fontsize-h3);
 }
-h5{
+h4{
 	display: inline;
 }
 
@@ -120,7 +113,7 @@ h5{
 .section__title--intro{
 	font-weight: var(--fontweight-regular);
 }
-.section__title--intro strong{ /* Braucht immer eine ganze Zeile */
+.section__title--intro strong{
 	display: block;
 }
 
@@ -141,8 +134,7 @@ h5{
 	margin-bottom: 2em;
 }
 
-/* header & navigation */
-
+/* ----------------------------------------- header & navigation ----------------------------------------- */
 .logo{
 	max-width: 125px;
 }
@@ -163,7 +155,7 @@ header{
 	right: 0;
 	z-index: 100;
 
-	transform: translateX(100%); /* Navigation breite */
+	transform: translateX(100%);
 	transition: transform 250ms cubic-bezier(0.5, 0, 0.5, 1);
 }
 
@@ -172,7 +164,6 @@ header{
 	display: flex;
 	height: 100%;
 	flex-direction: column;
-	/*justify-content: space-around; */
 	align-items: center;
 	margin: 0;
 	padding: 0;
@@ -201,7 +192,7 @@ header{
 }
 
 .nav-open .nav{
-	transform: translateX(0); /* öffnet und schliesst Navigationsleiste */
+	transform: translateX(0);
 }
 
 .nav-open .nav-toggle{
@@ -209,7 +200,7 @@ header{
 }
 
 .nav-open .hamburger{
-	transform: rotate( 0.625turn); /* rotates weirdly */
+	transform: rotate( 0.625turn);
 }
 
 .nav-open .hamburger::before{
@@ -254,17 +245,11 @@ header{
 }
 
 
-/* intro section */
+/* ----------------------------------------- intro section ----------------------------------------- */
 
 .intro{
 	position: relative;
-	background-color: var(--color-light); /* sicherheitshalber, wenn das Bild nicht lädt 
-	background-image: url(../img/bg_japan.jpg);
-	background-blend-mode: multiply;
-	background-repeat: no-repeat;
-	width: 100%;
-	color: var(--color-dark);
-	text-align: center; */
+	background-color: var(--color-light);
 }
 
 .intro__img{
@@ -310,7 +295,6 @@ header{
 /* ----------------------------------------- My Portfolio  ----------------------------------------- */
 
 .my-services{
-/*	background-color: var(--color-accent); */
 	background-color: rgba(0, 15, 0, 0.2); 
 	background-image: url(../img/greenbg.jpg);
 	background-size: cover;
@@ -680,6 +664,7 @@ header{
 #modal__container.show {
 	opacity: 1;
 	pointer-events: auto;
+	transition: 0.5s;
 }
 
 .open{
@@ -710,3 +695,115 @@ header{
   cursor: pointer;
 }
 
+/* ----------------------------------------- Image expand ----------------------------------------- */
+#drawing_styles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3em;
+  padding: 1em;
+  max-width: 850px;
+}
+
+.hover_element {
+	width: 100%;
+	height: auto;
+}
+
+.hover_element:hover > .black{
+	opacity: 1;
+	transition: 1.1s;
+}
+
+.hover_element:hover > #traditional1{
+	opacity: 1;
+	transition: 0.7s;
+}
+.hover_element:hover > #traditional2{
+	opacity: 1;
+	transition: 1s;
+}
+.hover_element:hover > #traditional3{
+	opacity: 1;
+	transition: 1.3s;
+}
+.hover_element:hover > #traditional4{
+	opacity: 1;
+	transition: 1.5s;
+}
+
+.hover_element:hover > #digital1{
+	opacity: 1;
+	transition: 0.7s;
+}
+.hover_element:hover > #digital2{
+	opacity: 1;
+	transition: 1s;
+}
+.hover_element:hover > #digital3{
+	opacity: 1;
+	transition: 1.3s;
+}
+.hover_element:hover > #digital4{
+	opacity: 1;
+	transition: 1.5s;
+}
+
+.hover_element:hover > #sculpt1{
+	opacity: 1;
+	transition: 0.7s;
+}
+.hover_element:hover > #sculpt2{
+	opacity: 1;
+	transition: 1s;
+}
+.hover_element:hover > #sculpt3{
+	opacity: 1;
+	transition: 1.3s;
+}
+.hover_element:hover > #sculpt4{
+	opacity: 1;
+	transition: 1.5s;
+}
+
+.hover_img {
+	border-radius: 50%;
+	box-shadow: 0 0 1em 1em white inset;
+}
+
+.traditional {
+	grid-column: 1 / 2;
+	grid-row: 1;
+}
+
+#digital {
+	grid-column: 2 / 3;
+	grid-row: 1;
+}
+
+#three_d {
+	grid-column: 3 / 4;
+	grid-row: 1;
+}
+
+.overlay_image {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90vw;
+  z-index: 5;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.black{
+	background: rgba(0, 0, 0, 0.5);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 2;
+	opacity: 0;
+	pointer-events: none;
+}

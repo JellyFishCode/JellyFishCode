@@ -4,6 +4,7 @@ const images = document.querySelectorAll('.open');
 const close = document.getElementById("close");
 const modal = document.getElementById("modal");
 var modal__container = document.getElementById("modal__container");
+currentSlide(1);
 
 // ----------------- Popup Image -----------------
 images.forEach(img => {
@@ -58,3 +59,4 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 } 
+
