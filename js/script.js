@@ -20,8 +20,8 @@ navLinks.forEach(link => {
 // ----------------- Popup Image -----------------
 images.forEach(img => {
   img.addEventListener('click', (e) => {
-    modal.src = e.target.alt;
     modal__container.classList.add('show');
+    modal.src = e.target.alt;
   });
 });
 
